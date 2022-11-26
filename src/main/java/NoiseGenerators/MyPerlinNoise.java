@@ -68,13 +68,7 @@ public class MyPerlinNoise {
         //System.out.println(String.format("%d:%d",gridX,gridY));
 
 
-/*
-        System.out.println("-----------------------------");
-        System.out.println(topLeftGradient);
-        System.out.println(topRightGradient);
-        System.out.println(downLeftGradient);
-        System.out.println(downRightGradient);
-        */
+
 
         double lerpedTop=lerp(topLeftDot,topRightDot,localX);
         double lerpedDown=lerp(downLeftDot,downRightDot,localX);
@@ -83,15 +77,7 @@ public class MyPerlinNoise {
     private double lerp(double start,double end,double t){
         return start*(1-fading(t))+end*fading(t);
     }
-    public static void main(String[] args) {
-        MyPerlinNoise noise=new MyPerlinNoise()
 
-                .setGradientGridSize(4,4)
-                .setSeed(4048)
-                .setGridScale(100,100);
-
-        noise.getNoiseInPoint(0,0);
-    }
 
 
 
